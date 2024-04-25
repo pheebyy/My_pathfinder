@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_pathfinder/home_page.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -96,6 +97,12 @@ class _WelcomePageState extends State<WelcomePage> {
                               // Create customized feed based on selected interests
                               print('Selected interests: $interests');
                               //
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomePage(),
+                                ),
+                              );
                             }
                           : null,
                       child: Text('Done'),

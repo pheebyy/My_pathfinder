@@ -11,8 +11,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 224, 217, 243),
       key: _scaffoldKey,
       appBar: AppBar(
+        //backgroundColor: Color.fromARGB(255, 224, 217, 243),
         title: Text('Dashboard'),
         actions: [
           IconButton(
@@ -24,48 +26,54 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       endDrawer: Drawer(
+        backgroundColor: Colors.purple[900],
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text('Amina'),
-              accountEmail: Text('Last page'),
+              accountName: Text('Phoebe'),
+              accountEmail: Text('phoebechristine@gmail.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage(
-                    'assets/images/user_avatar.png'), // Replace with your actual image asset
+                    'assets/images/mentor5.jpg'), // Replace with your actual image asset
               ),
             ),
             ListTile(
-              leading: Icon(Icons.dashboard),
-              title: Text('Dashboard'),
+              leading: Icon(Icons.dashboard, color: Colors.white),
+              title: Text(
+                'Dashboard',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              leading: Icon(Icons.settings, color: Colors.white),
+              title: Text('Settings', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
-              leading: Icon(Icons.library_books),
-              title: Text('Resources'),
+              leading: Icon(Icons.library_books, color: Colors.white),
+              title: Text('Resources', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
-              leading: Icon(Icons.request_page),
-              title: Text('Requests'),
+              leading: Icon(Icons.request_page, color: Colors.white),
+              title: Text('Requests', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
-              leading: Icon(Icons.message),
-              title: Text('Messages'),
+              leading: Icon(Icons.message, color: Colors.white),
+              title: Text('Messages', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
-              leading: Icon(Icons.person_add),
-              title: Text('Become a Mentor'),
+              leading: Icon(Icons.person_add, color: Colors.white),
+              title: Text('Become a Mentor',
+                  style: TextStyle(color: Colors.white)),
             ),
             ListTile(
-              leading: Icon(Icons.notifications),
-              title: Text('Notification'),
+              leading: Icon(Icons.notifications, color: Colors.white),
+              title:
+                  Text('Notification', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
-              leading: Icon(Icons.stars),
-              title: Text('Get Premium'),
+              leading: Icon(Icons.stars, color: Colors.white),
+              title: Text('Get Premium', style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
@@ -76,6 +84,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextField(
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: 'Search',
                 prefixIcon: Icon(Icons.search),
@@ -88,7 +97,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               'Top mentors for you',
               style: TextStyle(
-                fontSize: 18.0,
+                fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -138,7 +147,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               'Featured Events',
               style: TextStyle(
-                fontSize: 18.0,
+                fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -150,14 +159,14 @@ class _HomePageState extends State<HomePage> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
-                        'assets/images/event1.png', // Replace with your actual image asset
+                        'assets/images/Relationship.jpg', // Replace with your actual image asset
                         width: 150.0,
                         height: 100.0,
                         fit: BoxFit.cover,
                       ),
                     ),
                     SizedBox(height: 4.0),
-                    Text('How to become Ridiculously Self-Aware in 20 Minutes'),
+                    Text('Self-Awareness in 20 Minutes'),
                   ],
                 ),
                 SizedBox(width: 16.0),
@@ -166,19 +175,19 @@ class _HomePageState extends State<HomePage> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
-                        'assets/images/event2.png', // Replace with your actual image asset
+                        'assets/images/Mentor Relationship.jpg', // Replace with your actual image asset
                         width: 150.0,
                         height: 100.0,
                         fit: BoxFit.cover,
                       ),
                     ),
                     SizedBox(height: 4.0),
-                    Text('Get started with Public Speaking'),
+                    Text('Public Speaking'),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 18.0),
             Text(
               'Load more',
               style: TextStyle(
@@ -188,28 +197,47 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 16.0),
             Divider(),
-            SizedBox(height: 16.0),
-            Text(
-              'Want to gain a new skill & get certified?',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 8.0),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  // Handle explore courses button press
-                },
-                child: Text('Explore Courses'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.purple[900],
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+            SizedBox(height: 18.0),
+            Container(
+              color: Colors.purple[900],
+              padding: EdgeInsets.only(top: 16.0, left: 20, bottom: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Want to gain a new skill & get certified?',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
+                  SizedBox(height: 8.0),
+                  Center(
+                    child: SizedBox(
+                      width: 100,
+                      height: 40,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          // Handle explore courses button press
+                        },
+                        child: Text(
+                          'Explore Courses',
+                          style: TextStyle(
+                            color: Colors.purple[900],
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 235, 215, 254),
+                          foregroundColor: Colors.purple[900],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -218,15 +246,29 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(
+              Icons.home,
+              color: Colors.purple[900],
+            ),
+            // label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
+            icon: Icon(
+              Icons.menu_book_sharp,
+              color: Colors.purple[900],
+            ),
+            //label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.favorite,
+              color: Colors.purple[900],
+            ),
+            //label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,
+                color: const Color.fromARGB(255, 80, 23, 151)),
             label: 'Profile',
           ),
         ],
