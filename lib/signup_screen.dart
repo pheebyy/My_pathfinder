@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/authentication_screen.dart';
-import 'package:my_pathfinder/signin_screen.dart';
+import 'package:pathfinder/authentication_screen.dart';
+import 'package:pathfinder/signin_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key, required String userType});

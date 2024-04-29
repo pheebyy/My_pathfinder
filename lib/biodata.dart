@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/dashboard.dart';
+import 'package:pathfinder/dashboard.dart';
 
 class BiodataScreen extends StatefulWidget {
   const BiodataScreen({super.key, required String userType});

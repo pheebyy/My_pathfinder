@@ -78,6 +78,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return TextButton(
       onPressed: () {
         // Handle skipping the onboarding screens
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const WelcomeScreen()),
+        );
       },
       child: const Text(
         'Skip',

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/calendar.dart';
-import 'package:my_pathfinder/dashboard.dart';
-import 'package:my_pathfinder/notification_screen.dart';
+import 'package:pathfinder/calendar.dart';
+import 'package:pathfinder/dashboard.dart';
+import 'package:pathfinder/mentor%20_edit_profile.dart';
+import 'package:pathfinder/mentor%20requests%20.dart';
+import 'package:pathfinder/notification_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
@@ -28,7 +30,7 @@ class MenuScreen extends StatelessWidget {
               'Phoebe',
               style: TextStyle(color: Colors.white),
             ),
-            accountEmail: null,
+            accountEmail: Text('phoebenykiamo@gmail.com'),
           ),
           ListTile(
             leading: const Icon(Icons.dashboard, color: Colors.white),
@@ -62,6 +64,11 @@ class MenuScreen extends StatelessWidget {
             ),
             onTap: () {
               // Navigate to the requests screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => MentorshipRequestScreen()),
+              );
             },
           ),
           ListTile(
@@ -149,6 +156,10 @@ class CustomUserAccountsDrawerHeaderWrapper extends StatelessWidget {
           InkWell(
             onTap: () {
               // Handle edit profile action
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => EditBioScreen()),
+              );
             },
             child: const Padding(
               padding: EdgeInsets.all(8.0),

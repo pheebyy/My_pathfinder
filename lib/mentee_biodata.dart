@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/welcome_mentee.dart';
+import 'package:pathfinder/welcome_mentee.dart';
 
 class BiodataPage extends StatefulWidget {
   @override

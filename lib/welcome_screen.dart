@@ -1,7 +1,7 @@
 // welcome_screen.dart
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/mentee_age.dart';
-import 'package:my_pathfinder/signup_screen.dart';
+import 'package:pathfinder/mentee_age.dart';
+import 'package:pathfinder/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

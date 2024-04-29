@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/dashboard.dart';
+import 'package:pathfinder/dashboard.dart';
+import 'package:pathfinder/signup_screen.dart';
 
-import 'package:my_pathfinder/signup_screen.dart';
 // Import the menu_screen.dart file
 
 class SignInScreen extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/mentee_signin.dart';
-import 'package:my_pathfinder/mentorauth.dart';
+import 'package:pathfinder/mentee_signin.dart';
+import 'package:pathfinder/mentorauth.dart';
 
 class SignupPage extends StatefulWidget {
   @override

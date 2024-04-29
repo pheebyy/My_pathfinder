@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/home_page.dart';
-import 'package:my_pathfinder/mentee_sighnup.dart';
+import 'package:pathfinder/home_page.dart';
+import 'package:pathfinder/mentee_sighnup.dart';
 
 class SignInPage extends StatefulWidget {
   @override

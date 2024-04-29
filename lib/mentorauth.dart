@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:my_pathfinder/mentee_biodata.dart';
+import 'package:pathfinder/mentee_biodata.dart';
 
 class VerificationPage extends StatefulWidget {
   const VerificationPage({super.key});

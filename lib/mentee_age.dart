@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/mentee_sighnup.dart';
+import 'package:pathfinder/mentee_sighnup.dart';
 
 class AgeScreen extends StatelessWidget {
   @override

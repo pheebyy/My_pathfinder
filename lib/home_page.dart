@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pathfinder/book_session.dart';
+import 'package:pathfinder/mentee_settings.dart';
+import 'package:pathfinder/mentors_list.dart';
+import 'package:pathfinder/welcome_screen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,7 +39,7 @@ class _HomePageState extends State<HomePage> {
               accountEmail: Text('phoebechristine@gmail.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage(
-                    'assets/images/mentor5.jpg'), // Replace with your actual image asset
+                    'assets/images/6691.jpg'), // Replace with your actual image asset
               ),
             ),
             ListTile(
@@ -44,10 +48,24 @@ class _HomePageState extends State<HomePage> {
                 'Dashboard',
                 style: TextStyle(color: Colors.white),
               ),
+              onTap: () {
+                // Navigate to the dashboard screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.settings, color: Colors.white),
               title: Text('Settings', style: TextStyle(color: Colors.white)),
+              onTap: () {
+                // Navigate to the dashboard screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsScreen()),
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.library_books, color: Colors.white),
@@ -56,6 +74,13 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: Icon(Icons.request_page, color: Colors.white),
               title: Text('Requests', style: TextStyle(color: Colors.white)),
+              onTap: () {
+                // Navigate to the dashboard screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BookSessionPage()),
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.message, color: Colors.white),
@@ -65,6 +90,13 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.person_add, color: Colors.white),
               title: Text('Become a Mentor',
                   style: TextStyle(color: Colors.white)),
+              onTap: () {
+                // Navigate to the dashboard screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WelcomeScreen()),
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.notifications, color: Colors.white),
@@ -84,14 +116,22 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextField(
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Color.fromARGB(255, 16, 16, 16)),
               decoration: InputDecoration(
+                fillColor: Colors.white,
                 hintText: 'Search',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
               ),
+              onTap: () {
+                // Navigate to the dashboard screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MentorList()),
+                );
+              },
             ),
             SizedBox(height: 16.0),
             Text(
@@ -250,21 +290,21 @@ class _HomePageState extends State<HomePage> {
               Icons.home,
               color: Colors.purple[900],
             ),
-            // label: 'Home',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.menu_book_sharp,
               color: Colors.purple[900],
             ),
-            //label: 'Home',
+            label: 'Resources',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.favorite,
               color: Colors.purple[900],
             ),
-            //label: 'Favorites',
+            label: 'Favorites',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person,

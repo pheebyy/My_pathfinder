@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/home_page.dart';
+import 'package:pathfinder/home_page.dart';
 
 class WelcomePage extends StatefulWidget {
   @override

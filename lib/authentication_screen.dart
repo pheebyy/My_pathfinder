@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/biodata.dart';
+import 'package:pathfinder/biodata.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});

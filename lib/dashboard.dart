@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_pathfinder/menu.dart';
+import 'package:pathfinder/menu.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
